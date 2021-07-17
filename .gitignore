@@ -1,0 +1,5 @@
+venv/
+.ipynb_checkpoints/
+
+#Arquivos do edior de texto
+.vscode
