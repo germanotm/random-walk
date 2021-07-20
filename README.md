@@ -4,7 +4,8 @@ Algoritmo para simular o random walk em 1 + 1 dimensões (posição x e tempo) e
 
 Feito por Germano Teixeira de Miranda para a disciplina Princípios de Modelagem Matemática do Mestrado em Modelagem Matemática e Computacional do CEFET-MG. 
 
-pdf: https://github.com/germanotm/random-walk/latex/latex.out/random-walk.pdf
+pdf: https://github.com/germanotm/random-walk/blob/main/latex/latex.out/random-walk.pdf
+
 github: https://github.com/germanotm/random-walk
 
 ## Introdução
