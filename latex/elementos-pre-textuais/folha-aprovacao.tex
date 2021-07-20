@@ -1,0 +1,71 @@
+% ------------------------------------------------------------------------------
+% Folha de aprovação
+% ------------------------------------------------------------------------------
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por um
+% documento digitalizado em PDF da página assinada pela banca.
+%
+% Para importar o PDF com a página assinada, basta usar o comando abaixo
+% no documento principal deste trabalho (meu-trabalho.tex):
+% \importarfolhadeaprovacao{folha_aprovacao.pdf}
+
+\makeatletter
+\begin{folhadeaprovacao}
+
+    % Imprime o nome do autor
+    \begin{center}
+        \normalfont\large\scshape\textbf\imprimirautor
+    \end{center}
+
+    % Espaço vertical
+    \vspace*{\stretch{2}}
+
+    % Imprime o título do trabalho
+    \begin{center}
+        \ABNTEXchapterfont\LARGE\scshape\SingleSpacing{%
+            \imprimirtitulo%
+            \abntex@ifnotempty{\imprimirsubtitulo}{%
+                {:\\}{\Large\imprimirsubtitulo}}%
+        }
+    \end{center}
+
+    % Espaço vertical
+    \vspace*{\stretch{0.5}}
+
+    % Imprime o preâmbulo
+    \abntex@ifnotempty{\imprimirpreambulo}{%
+        \hspace{.3\textwidth}
+        \hyphenpenalty=10000\hbadness=10000%
+        \begin{minipage}{.6\textwidth}
+            \imprimirpreambulo
+        \end{minipage}
+    }
+
+    % Espaço vertical
+    \vspace*{\stretch{0.5}}
+
+    \begin{center}
+        Trabalho aprovado. \imprimirlocal, 23 de outubro de 2021:
+    \end{center}
+
+    % Imprime os nomes dos membros
+    \abntex@ifnotempty{\imprimirorientador}{\assinatura{\imprimirorientador \\ \imprimirinstOrientador}}
+    \abntex@ifnotempty{\imprimircoorientador}{\assinatura{\imprimircoorientador \\ \imprimirinstCoorientador}}
+    \assinatura{Prof. Dr. Nome do convidado 1 \\ Instituição do convidado 1}
+    \assinatura{Prof. Dr. Nome do convidado 2 \\ Instituição do convidado 2}
+    %\assinatura{Prof. Dr. Nome do convidado 3 \\ Instituição do convidado 3}
+    %\assinatura{Prof. Dr. Nome do convidado 4 \\ Instituição do convidado 4}
+
+    % Espaço vertical
+    \vspace*{\stretch{0.5}}
+
+    % Imprime local e data
+    \begin{center}
+        \normalfont\scshape{\imprimirlocal}\\
+        \normalfont\scshape{\imprimirdata}
+    \end{center}
+
+\end{folhadeaprovacao}
+\makeatother

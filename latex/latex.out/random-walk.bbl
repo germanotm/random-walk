@@ -1,0 +1,15 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Miranda 2021]{RandomWalk}
+\abntrefinfo{Miranda}{MIRANDA}{2021}
+{MIRANDA, G.~T. de. \textbf{Código fonte random walk 1D}. 2021.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$https:\-/\-/github\-.com\-/germanotm\-/random-walk$>$}{https://github.com/germanotm/random-walk}.
+  Acesso em: 19 de julho de 2021.}
+
+\end{thebibliography}

@@ -1,0 +1,15 @@
+\changetocdepth {4}
+\babel@toc {brazil}{}
+\contentsline {chapter}{\chapternumberline {1}Introdução}{4}{chapter.1}%
+\contentsline {chapter}{\chapternumberline {2}Metodologia}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Gerador de números aleatórios e simulação do random walk.}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Executar 10 caminhadas com 10000 passos cada.}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Calcular o desvio quadrático médio em escala log-log.}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Ajustar a curva de lei de potência (alométrica).}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Verificar o expoente da lei de potência obtida.}{5}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Verificar o teorema Central do Limite para a simulação.}{6}{section.2.6}%
+\contentsline {chapter}{\chapternumberline {3}Resultados}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Discussão}{9}{section.3.1}%
+\contentsline {chapter}{\chapternumberline {4}Conclusão}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Trabalhos futuros}{10}{section.4.1}%
+\contentsline {chapter}{Refer\^encias}{11}{chapter*.4}%

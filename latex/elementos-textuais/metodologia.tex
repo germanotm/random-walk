@@ -1,0 +1,39 @@
+% ------------------------------------------------------------------------------
+% Metodologia
+% ------------------------------------------------------------------------------
+
+\chapter{Metodologia}
+\label{chap_metodologia}
+Para realizar a simulação utilizamos python 3. Utilizamos as bibliotecas numpy para realizar operações com vetores, matplotlib para desenhar os gráficos, scipy para ajuste de curvas e criação do histograma. Para melhorar a legibilidade e organizar o código utilizamos o jupyterlab.
+
+O desenvolvimento deste trabalho foi executado em 6 etapas.
+
+\section{Gerador de números aleatórios e simulação do random walk.}
+\label{sec_1}
+
+Implementamos um algoritmo de random walk com 1+1 dimensão (posição x tempo) \cite{RandomWalk}. Para garantir a aleatoriedade do movimento, implementamos um gerador de números aleatórios congruencial e utilizamos o seu resultado para decidir qual direção se mover em cada passo. Um gerador de números aleatórios congruencial funciona através da relação de recorrência definida por $ x_{n+1} = (aX_{n} + c)  \mod  m $.
+
+\section{Executar 10 caminhadas com 10000 passos cada.}
+\label{sec_2}
+
+Executamos o caminho aleatório 10 vezes com 10000 passos a cada iteração e desenhamos um gráfico mostrando o caminho percorrido. 
+
+\section{Calcular o desvio quadrático médio em escala log-log.}
+\label{sec_3}
+
+Com os caminhos simulados calculamos o desvio médio quadrático $R^{2}$ (Mean Square Displacement) e mostramos graficamente em uma escala log-log ($R^{2}$ x t). 
+
+\section{Ajustar a curva de lei de potência (alométrica).}
+\label{sec_4}
+
+Utilizamos o desvio médio quadrático calculado para ajustar uma função de lei de potência $(y = ax^{b})$ e desenhamos um novo gráfico com os dados $R^{2}$ e a função ajusta para visualizar a qualidade do ajuste. 
+
+\section{Verificar o expoente da lei de potência obtida.}
+\label{sec_5}
+
+Observando o expoente da função da lei de potência ajustada podemos verificar se a entidade em movimento está confinada (quando expoente é menor que um), em movimento de difusão (quando o expoente é igual a 1), ou sujeita algum fluxo ou força externa (quando expoente é maior do que 1).
+
+\section{Verificar o teorema Central do Limite para a simulação.}
+\label{sec_6}
+
+Por fim geramos um histograma com o valor da posição final de cada caminhante aleatório e aproximamos o histograma com uma gaussiana para confirmar que a random walk respeita o teorema central do limite.

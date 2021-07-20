@@ -1,0 +1,122 @@
+% ------------------------------------------------------------------------------
+% Centro Federal de Educação Tecnológica de Minas Gerais - CEFET-MG
+%
+% Modelo de trabalho acadêmico em conformidade com as normas da ABNT
+% (Tese de Doutorado, Dissertação de Mestrado ou Projeto de Qualificação)
+%
+% Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
+%
+% Autores: Cristiano Nunes <cfgnunes@gmail.com>
+%          Henrique Borges <henrique@cefetmg.br>
+% ------------------------------------------------------------------------------
+
+% Utiliza um modelo para impressão apenas no anverso
+\documentclass[oneside]{cefetmg}
+
+% Utiliza um modelo para impressão em frente (anverso) e verso
+%\documentclass[twoside]{cefetmg}
+
+% Utiliza um modelo que mostra a palavra "Capítulo" no início de cada capítulo
+%\documentclass[oneside, nomecapitulo]{cefetmg}
+
+% ------------------------------------------------------------------------------
+% Pacotes utilizados
+% ------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}         % Codificação do documento
+\usepackage[T1]{fontenc}            % Seleção de código de fonte
+\usepackage{booktabs}               % Réguas horizontais em tabelas
+\usepackage{color, colortbl}        % Controle de cores
+\usepackage{graphicx}               % Inclusão de gráficos
+\usepackage{indentfirst}            % Recua o primeiro parágrafo de cada seção
+\usepackage{microtype}              % Melhora a justificação do documento
+\usepackage{multirow, makecell}     % Tabelas com múltiplas linhas e colunas
+\usepackage{verbatim}               % Exibe texto tal como escrito no documento
+\usepackage{icomma}                 % Utiliza vírgulas em expressões matemáticas
+\usepackage{subeqnarray}            % Subenumeração de equações
+\usepackage{amsmath}                % Funções matemáticas
+%\usepackage[charter]{mathdesign}   % Utiliza a fonte 'Charter BT' (excelente!)
+\usepackage{newtxtext,newtxmath}    % Utiliza a fonte 'Times New Roman' (clone)
+%\usepackage{palatino}              % Utiliza a fonte 'Palatino' (clone)
+%\usepackage{amsfonts}              % Fontes e símbolos matemáticos
+%\usepackage{latexsym}              % Mais símbolos matemáticos
+%\usepackage{xfrac}                 % Escreve frações de forma compacta
+
+% Utiliza a fonte 'Arial' (clone)
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault}
+
+% ------------------------------------------------------------------------------
+% Configurações gerais
+% ------------------------------------------------------------------------------
+
+% Define o tamanho do recuo do parágrafo
+\setlength{\parindent}{1.25cm}
+
+% Define o espaçamento entre um parágrafo e outro
+\setlength{\parskip}{0.0cm}
+
+% Define a cor utilizada nos links do PDF
+\definecolor{blue_link}{RGB}{0,80,128}
+
+% Define as palavras-chave nos metadados do PDF
+\hypersetup{pdfkeywords={%
+    Palavra-chave 1, Palavra-chave 2, Palavra-chave 3, Palavra-chave 4.
+}}
+
+% Define a hifenização de palavras que não estão no dicionário
+%\hyphenation{%
+%    qua-dros-cha-ve
+%    Kat-sa-gge-los
+%}
+
+% ------------------------------------------------------------------------------
+% Inclui os arquivos do trabalho acadêmico
+% ------------------------------------------------------------------------------
+
+% Inclui o arquivo que contém os dados do trabalho acadêmico
+\input{elementos-pre-textuais/preambulo.tex}
+
+% Início do documento
+\begin{document}
+
+\pretextual % Define o estilo de página para os elementos pré-textuais
+
+\imprimircapa                                           % Capa
+%\imprimirfolhaderosto*{}                                % Folha de rosto
+%\importarfichacatalografica{ficha-catalografica.pdf}    % Ficha catalográfica
+
+% Use o comando abaixo para usar um modelo de folha de aprovação...
+%\input{elementos-pre-textuais/folha-aprovacao.tex}
+% ...ou use o comando abaixo para importar uma folha digitalizada no formato PDF
+%\importarfolhadeaprovacao{folha-aprovacao.pdf}
+
+%\input{elementos-pre-textuais/dedicatoria.tex}          % Dedicatória
+%\input{elementos-pre-textuais/agradecimentos.tex}       % Agradecimentos
+%\input{elementos-pre-textuais/epigrafe.tex}             % Epígrafe
+\input{elementos-pre-textuais/resumo-pt.tex}            % Resumo
+%\input{elementos-pre-textuais/resumo-en.tex}            % Abstract
+\imprimirlistafiguras                                   % Lista de figuras
+%\imprimirlistatabelas                                   % Lista de tabelas
+%\imprimirlistaquadros                                   % Lista de quadros
+%\imprimirlistaalgoritmos                                % Lista de algoritmos
+%\input{elementos-pre-textuais/lista-siglas.tex}         % Lista de siglas
+%\input{elementos-pre-textuais/lista-simbolos.tex}       % Lista de símbolos
+\imprimirsumario                                        % Sumário
+
+\textual % Define o estilo de página para os elementos textuais
+
+\input{elementos-textuais/introducao.tex}               % Introdução
+%\input{elementos-textuais/fundamentacao-teorica.tex}    % Fundamentação teórica
+%\input{elementos-textuais/trabalhos-relacionados.tex}   % Trabalhos relacionados
+\input{elementos-textuais/metodologia.tex}              % Metodologia
+\input{elementos-textuais/resultados.tex}               % Resultados
+\input{elementos-textuais/conclusao.tex}                % Conclusão
+
+\postextual % Define o estilo de página para os elementos pós-textuais
+
+\imprimirreferencias{referencias.bib}                   % Referências
+%\input{elementos-pos-textuais/apendices.tex}            % Apêndices
+%\input{elementos-pos-textuais/anexos.tex}               % Anexos
+\printindex                                             % Índice remissivo
+
+\end{document}
